@@ -3,134 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav Patil [cite: 2] - Portfolio</title>
+    <title>Pranav Patil | Software Engineer & Data Scientist</title>
     <style>
-        /* Modern, clean CSS */
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-color: #0f172a; /* Deep Navy */
+            --accent-color: #2563eb; /* Royal Blue */
+            --bg-color: #f8fafc; /* Light Slate */
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-light: #64748b;
+        }
+
+        /* Global Styles */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
+            color: var(--text-main);
+            background-color: var(--bg-color);
         }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            margin: 0 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
         header {
-            background: #1a252c;
+            background: linear-gradient(135deg, var(--primary-color), #1e293b);
             color: #ffffff;
-            padding: 3rem 0;
+            padding: 5rem 2rem;
             text-align: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            letter-spacing: -1px;
         }
         header p {
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-top: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        header a {
-            color: #4da6ff;
-            text-decoration: none;
+        .contact-links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
+        .contact-links a {
+            color: #60a5fa;
+            font-weight: 500;
+        }
+
+        /* Layout Containers */
         .container {
-            width: 85%;
+            width: 90%;
             max-width: 1000px;
             margin: auto;
-            overflow: hidden;
-            padding: 2rem 0;
+            padding: 3rem 0;
         }
         section {
-            background: #ffffff;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
         }
         h2 {
-            color: #1a252c;
-            border-bottom: 2px solid #4da6ff;
+            color: var(--primary-color);
+            font-size: 2rem;
+            border-bottom: 3px solid var(--accent-color);
             padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        /* Cards for Experience, Projects, Education */
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 4px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .card-title {
+            margin: 0;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+        .card-subtitle {
+            font-weight: 600;
+            color: var(--text-light);
+            margin: 0.2rem 0 1rem 0;
+        }
+        .card-date {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        ul {
+            padding-left: 1.2rem;
             margin-top: 0;
         }
-        .item {
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Tags */
+        .skills-category {
             margin-bottom: 1.5rem;
-            border-left: 4px solid #4da6ff;
-            padding-left: 1rem;
         }
-        .item h3 {
-            margin: 0 0 0.2rem 0;
-            color: #2c3e50;
-        }
-        .meta {
-            font-style: italic;
-            color: #666;
+        .skills-category h3 {
             margin-bottom: 0.8rem;
+            color: var(--primary-color);
         }
-        .skills p {
-            margin: 0.5rem 0;
+        .skill-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: var(--text-main);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0 0.5rem 0.5rem 0;
+            transition: background 0.2s ease;
+        }
+        .skill-tag:hover {
+            background: #cbd5e1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card-header {
+                flex-direction: column;
+            }
+            .card-date {
+                margin-top: 0.2rem;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#leadership">Leadership & Commmunity</a>
+    </nav>
+
     <header>
-        <h1>Pranav Patil [cite: 2]</h1>
-        <p>
-            609-721-2922 [cite: 3] | 
-            pranav.b.patil@rutgers.edu [cite: 3] | 
-            <a href="https://linkedin.com/in/pranavbpatil05">linkedin.com/in/pranavbpatil05</a> [cite: 3]
-        </p>
+        <h1>Pranav Patil</h1>
+        <p>Software Engineer & Data Science Student at Rutgers University</p>
+        <div class="contact-links">
+            <a href="tel:6097212922">609-721-2922</a>
+            <a href="mailto:pranav.b.patil@rutgers.edu">pranav.b.patil@rutgers.edu</a>
+            <a href="https://linkedin.com/in/pranavbpatil05" target="_blank">linkedin.com/in/pranavbpatil05</a>
+        </div>
     </header>
 
     <div class="container">
         
         <section id="education">
-            <h2>Education [cite: 1]</h2>
-            <div class="item">
-                <h3>Rutgers University-New Brunswick SAS Honors College [cite: 4]</h3>
-                <p class="meta">Aug. 2023 - May 2026 (Expected) [cite: 8]</p>
-                <p><strong>Bachelor of Sciences in Computer Science and Mathematics [cite: 5]</strong></p>
-                <p>GPA: 3.96/4.0 [cite: 6] | Honors: Dean's List [cite: 6]</p>
+            <h2>Education</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Rutgers University-New Brunswick | SAS Honors College</h3>
+                    <span class="card-date">Aug. 2023 – May 2026 (Expected)</span>
+                </div>
+                <p class="card-subtitle">Bachelor of Sciences in Computer Science and Mathematics | New Brunswick, NJ</p>
+                <ul>
+                    <li><strong>GPA:</strong> 3.96/4.0 | <strong>Honors:</strong> Dean’s List (every semester).</li>
+                    <li><strong>Relevant Coursework:</strong> Data Structures, Data Management for Data Science, Computer Architecture, Software Methodology, Linear Optimization, AI Tools in Mathematics, Intro to AI, Discrete Structures, Math Theory of Probability.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">West Windsor-Plainsboro High School North</h3>
+                    <span class="card-date">Sep. 2019 – Jun. 2023</span>
+                </div>
+                <p class="card-subtitle">High School Diploma | West Windsor, NJ</p>
+                <ul>
+                    <li><strong>GPA:</strong> 3.92/4.0 (Unweighted), 4.65/5.0 (Weighted).</li>
+                </ul>
             </div>
         </section>
 
         <section id="experience">
-            <h2>Experience [cite: 10]</h2>
+            <h2>Experience</h2>
             
-            <div class="item">
-                <h3>ARESTY Research Assistant | Computational Social Science Intern [cite: 11]</h3>
-                <p class="meta">Rutgers University New Brunswick [cite: 12] | May 2025 - Aug. 2025 [cite: 13]</p>
-                <p>Conducted a data-driven analysis of political YouTube content, applying Natural Language Processing (NLP) techniques to large-scale transcript and comment datasets. [cite: 14]</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ARESTY Research Assistant</h3>
+                    <span class="card-date">May 2025 – Aug. 2025</span>
+                </div>
+                <p class="card-subtitle">Rutgers University | New Brunswick, NJ</p>
+                <ul>
+                    <li>Conducted data-driven analysis of political YouTube content using NLP pipelines applied to large-scale transcript and comment datasets containing millions of tokens.</li>
+                    <li>Implemented BERTopic with Sentence-BERT to identify dominant political narratives and evaluate their evolution.</li>
+                    <li>Performed temporal correlation analysis, linking topic spikes with U.S. election events and online discourse trends.</li>
+                    <li>Presented findings in poster format at the ARESTY Summer Research Symposium to an audience of faculty, peers, and graduate mentors.</li>
+                </ul>
             </div>
 
-            <div class="item">
-                <h3>Embedded Systems Engineer Intern [cite: 17]</h3>
-                <p class="meta">Eaton Corporation [cite: 18] | May 2024 - Aug. 2024 [cite: 19]</p>
-                <p>Collaborated with engineering teams to analyze requirements for a secure data management platform, focusing on cataloging large volumes of test data. [cite: 20]</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Embedded Systems Engineer Intern</h3>
+                    <span class="card-date">May 2024 – Aug. 2024</span>
+                </div>
+                <p class="card-subtitle">Eaton Corporation | Moon Township, PA</p>
+                <ul>
+                    <li>Collaborated with the PCS engineering team to gather and analyze requirements for a secure data management platform for embedded devices.</li>
+                    <li>Developed prototypes for RESTful APIs in Python/Flask and designed optimized MongoDB schema supporting fast queries.</li>
+                    <li>Built proof-of-concept React user interface, improving usability for file upload, retrieval, and metadata search.</li>
+                    <li>Delivered presentations to senior engineers outlining design trade-offs and scalability considerations.</li>
+                </ul>
             </div>
-            
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Summer Computer Assistant Intern</h3>
+                    <span class="card-date">Jun. 2022 – Aug. 2022; Jun. 2023 – Aug. 2023</span>
+                </div>
+                <p class="card-subtitle">West Windsor-Plainsboro Regional School District | West Windsor, NJ</p>
+                <ul>
+                    <li>Optimized deployment logistics for 4,500+ Chromebooks, creating new methods of distribution that reduced deployment time by more than 50%.</li>
+                    <li>Resolved 400+ IT tickets, configured 300+ devices, and provided ongoing support for teachers and staff.</li>
+                    <li>Maintained and repaired printers, and assisted in troubleshooting wired/wireless network issues.</li>
+                    <li>Supported audio and visual technology in large auditoriums, to ensure smooth operations for district events.</li>
+                </ul>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>Projects [cite: 27]</h2>
+            <h2>Projects</h2>
             
-            <div class="item">
-                <h3>Food Recipe LLM with RAG [cite: 28]</h3>
-                <p>Architected a Retrieval-Augmented Generation (RAG) pipeline utilizing FAISS and Sentence Transformers (MiniLM) to mitigate LLM hallucinations and ground outputs in verified data. [cite: 30]</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Skin.AI – AI-Powered Skin Health Analyzer</h3>
+                    <span class="card-date">Oct. 2024</span>
+                </div>
+                <p class="card-subtitle">Python, PyTorch, Streamlit, Google Vertex AI</p>
+                <ul>
+                    <li>Developed and fine-tuned three machine learning models during a 24-hour hackathon, achieving over 80% accuracy in classifying common skin conditions.</li>
+                    <li>Integrated Vertex AI’s text-bison LLM to provide real-time explanations and personalized skincare advice alongside predictions.</li>
+                    <li>Built a Streamlit web app, demonstrating end-to-end deployment of ML models with an intuitive interface.</li>
+                    <li>Collaborated with a team of peers, showcasing ability to rapidly prototype and deliver impactful healthcare technology.</li>
+                </ul>
             </div>
 
-            <div class="item">
-                <h3>Skin. AI - AI-Powered Skin Health Analyzer [cite: 33]</h3>
-                <p>Developed and fine-tuned 3 different Machine Learning models in a 24-hour hackathon, achieving over 80% accuracy in classifying skin conditions from images. [cite: 35]</p>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">F1 Race Outcome Prediction</h3>
+                    <span class="card-date">Fall 2024</span>
+                </div>
+                <p class="card-subtitle">Python, Scikit-learn, XGBoost, Pandas, Matplotlib</p>
+                <ul>
+                    <li>Engineered predictive models on 10+ seasons of Formula 1 data (driver stats, team performance, qualifying, and weather), achieving 91% accuracy in forecasting top-3 race finishes.</li>
+                    <li>Performed feature engineering (pit stops, lap times, track characteristics) and correlation analysis to identify dominant predictors such as qualifying position and constructor form.</li>
+                    <li>Benchmarked multiple classifiers (Logistic Regression, Random Forest, Gradient Boosting, XGBoost), with XGBoost outperforming alternatives by 10–15%.</li>
+                    <li>Visualized feature importance, correlation heatmaps, and model misclassifications, providing insights into F1 race dynamics and systematic prediction errors.</li>
+                </ul>
             </div>
 
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Systems Programming Projects</h3>
+                    <span class="card-date">Fall 2024</span>
+                </div>
+                <p class="card-subtitle">C, POSIX, Unix</p>
+                <ul>
+                    <li><strong>Custom Memory Allocator:</strong> Implemented malloc/free with memory coalescing, alignment handling, and rigorous error detection.</li>
+                    <li><strong>Word Occurrence Counter:</strong> Built recursive text processing program to count word frequencies in directories, handling punctuation, hyphenation, and contractions accurately.</li>
+                    <li><strong>Unix Shell:</strong> Designed shell supporting redirection, pipes, wildcard expansion, and path searching using execv(), demonstrating low-level system programming expertise.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Code and Why – Technical Blog</h3>
+                    <span class="card-date">Jun. 2022 – Present</span>
+                </div>
+                <p class="card-subtitle">WordPress, Java, Python, C/C++</p>
+                <ul>
+                    <li>Founded and maintained personal technical blog (codings.blog) with a focus on algorithms, system design, and applied programming.</li>
+                    <li>Produced tutorial-style articles combining text, code snippets, and diagrams to maximize accessibility.</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="skills" class="skills">
-            <h2>Technical Skills [cite: 38]</h2>
-            <p><strong>Languages:</strong> Java, Python, SQL, C/C++, JavaScript, HTML/CSS [cite: 39]</p>
-            <p><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, FAISS [cite: 40]</p>
-            <p><strong>AI/ML & Data Science:</strong> PyTorch, Pandas, Scikit-learn, Hugging Face, LLMS, BERTopic [cite: 41]</p>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="card">
+                <div class="skills-category">
+                    <h3>Languages</h3>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C/C++</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+                <div class="skills-category">
+                    <h3>AI/ML & Data Science</h3>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">BERTopic</span>
+                    <span class="skill-tag">Sentence-BERT</span>
+                    <span class="skill-tag">Streamlit</span>
+                </div>
+                <div class="skills-category">
+                    <h3>Frameworks & Platforms</h3>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">Google Vertex AI</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">WordPress</span>
+                </div>
+                <div class="skills-category">
+                    <h3>Developer Tools</h3>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">PyCharm</span>
+                    <span class="skill-tag">Eclipse</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Linux/Unix Shell</span>
+                    <span class="skill-tag">Jupyter</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership">
+            <h2>Leadership & Community Involvement</h2>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Customer Support Volunteer</h3>
+                    <span class="card-date">Mar. 2021 – Aug. 2023</span>
+                </div>
+                <p class="card-subtitle">Rise Thrift Store | Hightstown, NJ</p>
+                <ul>
+                    <li>Contributed 200+ volunteer hours, consistently assisting workers and clients several times a week.</li>
+                    <li>Applied Spanish language skills to communicate with and assist diverse customer groups, ensuring accessibility and inclusivity.</li>
+                    <li>Provided compassionate, hands-on support with customer service, stock management, and operational tasks.</li>
+                    <li>Helped streamline store organization, creating smoother client experiences.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Diploma in Data Science and AI</h3>
+                    <span class="card-date">Dec. 2019 – Sept. 2021</span>
+                </div>
+                <p class="card-subtitle">Teens Learn AI</p>
+                <ul>
+                    <li>Multi-year program focused on machine learning fundamentals, model development, and data analysis.</li>
+                    <li>Built multiple ML projects including text classification and image recognition, applying supervised and unsupervised learning methods.</li>
+                    <li>Gained practical experience with Python, TensorFlow, Pandas, and Matplotlib for model development and data analysis.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Certifications</h3>
+                </div>
+                <ul>
+                    <li><strong>NJ Seal of Biliteracy — English & Spanish (Jun. 2023):</strong> Certified advanced bilingual proficiency through state-recognized assessment.</li>
+                    <li><strong>Piano Certification — Trinity College London (Mar. 2020 – Jun. 2022):</strong> Grade 6, Distinction. Demonstrated discipline and creativity through formal music training.</li>
+                </ul>
+            </div>
+
         </section>
 
     </div>
