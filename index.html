@@ -47,9 +47,10 @@
             display: flex;
             justify-content: center;
             padding: 1rem 0;
+            flex-wrap: wrap;
         }
         nav a {
-            margin: 0 1.5rem;
+            margin: 0.5rem 1.5rem;
             font-weight: 600;
             color: var(--text-main);
             text-decoration: none;
@@ -155,6 +156,13 @@
         li {
             margin-bottom: 0.5rem;
         }
+        
+        /* Summary Text */
+        .summary-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
 
         /* Skills Tags */
         .skills-category {
@@ -187,23 +195,18 @@
             .card-date {
                 margin-top: 0.2rem;
             }
-            nav {
-                flex-wrap: wrap;
-            }
-            nav a {
-                margin: 0.5rem;
-            }
         }
     </style>
 </head>
 <body>
 
     <nav>
+        <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#leadership">Leadership & Commmunity</a>
+        <a href="#leadership">Leadership</a>
     </nav>
 
     <header>
@@ -218,6 +221,15 @@
 
     <div class="container">
         
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="card">
+                <p class="summary-text">
+                    I am pursuing a Bachelor of Sciences in Computer Science and Mathematics at Rutgers University-New Brunswick SAS Honors College, with an expected graduation date of May 2026. I have hands-on experience as a Computational Social Science Intern and an Embedded Systems Engineer Intern, and have architected complex data-driven projects such as a Food Recipe LLM and an AI-Powered Skin Health Analyzer.
+                </p>
+            </div>
+        </section>
+
         <section id="education">
             <h2>Education</h2>
             
@@ -296,6 +308,19 @@
             
             <div class="card">
                 <div class="card-header">
+                    <h3 class="card-title">Food Recipe LLM with RAG</h3>
+                    <span class="card-date">Recent</span>
+                </div>
+                <p class="card-subtitle">FAISS, Sentence Transformers (MiniLM), NLP</p>
+                <ul>
+                    <li>Architected a Retrieval-Augmented Generation (RAG) pipeline utilizing FAISS and Sentence Transformers to mitigate LLM hallucinations and ground outputs in verified data.</li>
+                    <li>Engineered a semantic search index for 100,000+ recipes and developed strict prompt templates for the Phi-3-mini LLM, ensuring highly accurate and consistently formatted recipe generation.</li>
+                    <li>Deployed the end-to-end inference system as a RESTful web service using FastAPI and Uvicorn, enabling real-time user queries through an interactive UI.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
                     <h3 class="card-title">Skin.AI – AI-Powered Skin Health Analyzer</h3>
                     <span class="card-date">Oct. 2024</span>
                 </div>
@@ -334,18 +359,6 @@
                     <li><strong>Unix Shell:</strong> Designed shell supporting redirection, pipes, wildcard expansion, and path searching using execv(), demonstrating low-level system programming expertise.</li>
                 </ul>
             </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Code and Why – Technical Blog</h3>
-                    <span class="card-date">Jun. 2022 – Present</span>
-                </div>
-                <p class="card-subtitle">WordPress, Java, Python, C/C++</p>
-                <ul>
-                    <li>Founded and maintained personal technical blog (codings.blog) with a focus on algorithms, system design, and applied programming.</li>
-                    <li>Produced tutorial-style articles combining text, code snippets, and diagrams to maximize accessibility.</li>
-                </ul>
-            </div>
         </section>
 
         <section id="skills">
@@ -368,8 +381,8 @@
                     <span class="skill-tag">Matplotlib</span>
                     <span class="skill-tag">Scikit-learn</span>
                     <span class="skill-tag">BERTopic</span>
-                    <span class="skill-tag">Sentence-BERT</span>
-                    <span class="skill-tag">Streamlit</span>
+                    <span class="skill-tag">Hugging Face</span>
+                    <span class="skill-tag">LLMs</span>
                 </div>
                 <div class="skills-category">
                     <h3>Frameworks & Platforms</h3>
@@ -378,7 +391,9 @@
                     <span class="skill-tag">Flask</span>
                     <span class="skill-tag">Google Vertex AI</span>
                     <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">FAISS</span>
                 </div>
                 <div class="skills-category">
                     <h3>Developer Tools</h3>
@@ -386,7 +401,6 @@
                     <span class="skill-tag">VS Code</span>
                     <span class="skill-tag">PyCharm</span>
                     <span class="skill-tag">Eclipse</span>
-                    <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">Linux/Unix Shell</span>
                     <span class="skill-tag">Jupyter</span>
                 </div>
@@ -419,7 +433,6 @@
                 <ul>
                     <li>Multi-year program focused on machine learning fundamentals, model development, and data analysis.</li>
                     <li>Built multiple ML projects including text classification and image recognition, applying supervised and unsupervised learning methods.</li>
-                    <li>Gained practical experience with Python, TensorFlow, Pandas, and Matplotlib for model development and data analysis.</li>
                 </ul>
             </div>
 
