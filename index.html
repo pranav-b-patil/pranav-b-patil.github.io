@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranav Patil | Computer Science & Mathematics</title>
     <style>
-        /* CSS Variables for consistent theming */
+        /* CSS Variables for Forest Green, Bronze, and Gold Theme */
         :root {
-            --primary-color: #0f172a; /* Deep Navy */
-            --accent-color: #2563eb; /* Royal Blue */
-            --bg-color: #f8fafc; /* Light Slate */
-            --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-light: #64748b;
+            --primary-color: #1A3622; /* Dark Forest Green */
+            --accent-color: #B87333; /* Bronze */
+            --highlight-color: #D4AF37; /* Gold */
+            --bg-color: #F7F8F6; /* Soft warm off-white */
+            --card-bg: #FFFFFF;
+            --text-main: #2A362D; /* Dark slate green for readability */
+            --text-light: #5B6B60; /* Muted forest green */
         }
 
         /* Global Styles */
@@ -33,7 +34,7 @@
             transition: color 0.3s ease;
         }
         a:hover {
-            color: #1d4ed8;
+            color: var(--highlight-color);
             text-decoration: underline;
         }
 
@@ -48,11 +49,12 @@
             justify-content: center;
             padding: 1rem 0;
             flex-wrap: wrap;
+            border-bottom: 2px solid #eaece8;
         }
         nav a {
             margin: 0.5rem 1.5rem;
             font-weight: 600;
-            color: var(--text-main);
+            color: var(--primary-color);
             text-decoration: none;
         }
         nav a:hover {
@@ -62,19 +64,21 @@
 
         /* Hero Section */
         header {
-            background: linear-gradient(135deg, var(--primary-color), #1e293b);
+            background: linear-gradient(135deg, #0d2113, var(--primary-color));
             color: #ffffff;
             padding: 5rem 2rem;
             text-align: center;
+            border-bottom: 4px solid var(--accent-color);
         }
         header h1 {
             margin: 0;
             font-size: 3rem;
             letter-spacing: -1px;
+            color: #F9F6F0;
         }
         header p {
             font-size: 1.2rem;
-            color: #cbd5e1;
+            color: #e8ece9;
             margin-top: 1rem;
             max-width: 600px;
             margin-left: auto;
@@ -88,8 +92,11 @@
             flex-wrap: wrap;
         }
         .contact-links a {
-            color: #60a5fa;
+            color: var(--highlight-color);
             font-weight: 500;
+        }
+        .contact-links a:hover {
+            color: #f0c954;
         }
 
         /* Layout Containers */
@@ -124,7 +131,7 @@
         .card:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--accent-color);
+            border-left: 4px solid var(--highlight-color); /* Gold hover effect */
         }
         .card-header {
             display: flex;
@@ -146,10 +153,11 @@
         .card-date {
             font-size: 0.95rem;
             color: var(--text-light);
-            font-weight: 500;
-            background: #f1f5f9;
+            font-weight: 600;
+            background: #e6ebe6;
             padding: 0.2rem 0.8rem;
             border-radius: 15px;
+            border: 1px solid #d4dcd5;
         }
         
         /* Typography inside cards */
@@ -161,7 +169,7 @@
         .tech-stack {
             margin-top: 1.5rem;
             padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #e6ebe6;
             font-size: 0.9rem;
             color: var(--text-light);
         }
@@ -188,17 +196,17 @@
         }
         .skill-tag {
             display: inline-block;
-            background: #e2e8f0;
-            color: var(--text-main);
+            background: #e6ebe6;
+            color: var(--primary-color);
             padding: 0.4rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 600;
             margin: 0 0.5rem 0.5rem 0;
             transition: background 0.2s ease;
         }
         .skill-tag:hover {
-            background: #cbd5e1;
+            background: #d4dcd5;
         }
 
         /* Responsive */
@@ -333,7 +341,7 @@
             </div>
         </section>
 
-<section id="projects">
+        <section id="projects">
             <h2>Research & Technical Projects</h2>
 
             <div class="card">
