@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav Patil | Software Engineer & Data Scientist</title>
+    <title>Pranav Patil | Computer Science & Mathematics</title>
     <style>
         /* CSS Variables for consistent theming */
         :root {
@@ -111,11 +111,11 @@
             display: inline-block;
         }
 
-        /* Cards for Experience, Projects, Education */
+        /* Cards */
         .card {
             background: var(--card-bg);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.05);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -135,35 +135,48 @@
         }
         .card-title {
             margin: 0;
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             color: var(--primary-color);
         }
         .card-subtitle {
             font-weight: 600;
-            color: var(--text-light);
+            color: var(--accent-color);
             margin: 0.2rem 0 1rem 0;
         }
         .card-date {
             font-size: 0.95rem;
             color: var(--text-light);
             font-weight: 500;
+            background: #f1f5f9;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
         }
         
-        ul {
+        /* Typography inside cards */
+        .card-body p {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+        .tech-stack {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .tech-stack strong {
+            color: var(--primary-color);
+        }
+        
+        ul.styled-list {
             padding-left: 1.2rem;
             margin-top: 0;
         }
-        li {
+        ul.styled-list li {
             margin-bottom: 0.5rem;
         }
         
-        /* Summary Text */
-        .summary-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-main);
-        }
-
         /* Skills Tags */
         .skills-category {
             margin-bottom: 1.5rem;
@@ -171,6 +184,7 @@
         .skills-category h3 {
             margin-bottom: 0.8rem;
             color: var(--primary-color);
+            font-size: 1.1rem;
         }
         .skill-tag {
             display: inline-block;
@@ -193,7 +207,7 @@
                 flex-direction: column;
             }
             .card-date {
-                margin-top: 0.2rem;
+                margin-top: 0.5rem;
             }
         }
     </style>
@@ -204,14 +218,13 @@
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Research & Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#leadership">Leadership</a>
     </nav>
 
     <header>
         <h1>Pranav Patil</h1>
-        <p>Software Engineer & Data Science Student at Rutgers University</p>
+        <p>Software Engineer & Data Scientist at Rutgers University</p>
         <div class="contact-links">
             <a href="tel:6097212922">609-721-2922</a>
             <a href="mailto:pranav.b.patil@rutgers.edu">pranav.b.patil@rutgers.edu</a>
@@ -224,9 +237,14 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="card">
-                <p class="summary-text">
-                    I am pursuing a Bachelor of Sciences in Computer Science and Mathematics at Rutgers University-New Brunswick SAS Honors College, with an expected graduation date of May 2026. I have hands-on experience as a Computational Social Science Intern and an Embedded Systems Engineer Intern, and have architected complex data-driven projects such as a Food Recipe LLM and an AI-Powered Skin Health Analyzer.
-                </p>
+                <div class="card-body">
+                    <p>
+                        I am an undergraduate student pursuing a Bachelor of Sciences in Computer Science and Mathematics at the Rutgers University-New Brunswick SAS Honors College (Class of 2026). My technical focus lies at the intersection of deep learning, natural language processing, and secure systems architecture.
+                    </p>
+                    <p>
+                        Through my academic research and industry experience as an Embedded Systems Engineer Intern and Computational Social Science Intern, I have developed a passion for solving complex, data-heavy problems. Whether it is engineering a Retrieval-Augmented Generation (RAG) pipeline to ground LLM hallucinations, auditing AI models for mathematical reasoning, or normalizing large-scale demographic databases, I thrive on turning theoretical concepts into robust, deployable software.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -236,24 +254,13 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Rutgers University-New Brunswick | SAS Honors College</h3>
-                    <span class="card-date">Aug. 2023 – May 2026 (Expected)</span>
+                    <span class="card-date">Expected May 2026</span>
                 </div>
-                <p class="card-subtitle">Bachelor of Sciences in Computer Science and Mathematics | New Brunswick, NJ</p>
-                <ul>
-                    <li><strong>GPA:</strong> 3.96/4.0 | <strong>Honors:</strong> Dean’s List (every semester).</li>
-                    <li><strong>Relevant Coursework:</strong> Data Structures, Data Management for Data Science, Computer Architecture, Software Methodology, Linear Optimization, AI Tools in Mathematics, Intro to AI, Discrete Structures, Math Theory of Probability.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">West Windsor-Plainsboro High School North</h3>
-                    <span class="card-date">Sep. 2019 – Jun. 2023</span>
+                <p class="card-subtitle">Bachelor of Sciences in Computer Science and Mathematics</p>
+                <div class="card-body">
+                    <p><strong>GPA:</strong> 3.93/4.0 | <strong>Honors:</strong> Dean’s List (every semester)</p>
+                    <p><strong>Relevant Coursework:</strong> Deep Learning, Data Structures, Data Management for Data Science, Computer Architecture, Software Methodology, Linear Optimization, AI Tools in Mathematics, Discrete Structures, Mathematical Theory of Probability.</p>
                 </div>
-                <p class="card-subtitle">High School Diploma | West Windsor, NJ</p>
-                <ul>
-                    <li><strong>GPA:</strong> 3.92/4.0 (Unweighted), 4.65/5.0 (Weighted).</li>
-                </ul>
             </div>
         </section>
 
@@ -262,16 +269,18 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">ARESTY Research Assistant</h3>
+                    <h3 class="card-title">ARESTY Research Assistant | Computational Social Science</h3>
                     <span class="card-date">May 2025 – Aug. 2025</span>
                 </div>
-                <p class="card-subtitle">Rutgers University | New Brunswick, NJ</p>
-                <ul>
-                    <li>Conducted data-driven analysis of political YouTube content using NLP pipelines applied to large-scale transcript and comment datasets containing millions of tokens.</li>
-                    <li>Implemented BERTopic with Sentence-BERT to identify dominant political narratives and evaluate their evolution.</li>
-                    <li>Performed temporal correlation analysis, linking topic spikes with U.S. election events and online discourse trends.</li>
-                    <li>Presented findings in poster format at the ARESTY Summer Research Symposium to an audience of faculty, peers, and graduate mentors.</li>
-                </ul>
+                <p class="card-subtitle">Rutgers University | Mentored by Dr. Kiran Garimella</p>
+                <div class="card-body">
+                    <p>
+                        Conducted an extensive data-driven analysis to understand how political information and algorithmic filter bubbles are formed on YouTube surrounding the 2024 U.S. elections. I engineered a robust machine learning pipeline to ingest and analyze massive datasets containing millions of tokens from video transcripts, titles, and metadata.
+                    </p>
+                    <p>
+                        By implementing unsupervised topic modeling (BERTopic with Sentence-BERT) and sentiment analysis, I successfully mapped out ideological themes. The research revealed stark demographic divergence in content consumption—notably how political affiliation drives engagement toward specific narratives like election integrity and media bias. I presented these findings to faculty and peers at the ARESTY Summer Research Symposium.
+                    </p>
+                </div>
             </div>
 
             <div class="card">
@@ -280,94 +289,102 @@
                     <span class="card-date">May 2024 – Aug. 2024</span>
                 </div>
                 <p class="card-subtitle">Eaton Corporation | Moon Township, PA</p>
-                <ul>
-                    <li>Collaborated with the PCS engineering team to gather and analyze requirements for a secure data management platform for embedded devices.</li>
-                    <li>Developed prototypes for RESTful APIs in Python/Flask and designed optimized MongoDB schema supporting fast queries.</li>
-                    <li>Built proof-of-concept React user interface, improving usability for file upload, retrieval, and metadata search.</li>
-                    <li>Delivered presentations to senior engineers outlining design trade-offs and scalability considerations.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Summer Computer Assistant Intern</h3>
-                    <span class="card-date">Jun. 2022 – Aug. 2022; Jun. 2023 – Aug. 2023</span>
+                <div class="card-body">
+                    <p>
+                        Collaborated heavily with the PCS engineering team to design and prototype a highly secure data management platform tailored for embedded devices. I focused on the cataloging, retrieval, and metadata search of large volumes of test data.
+                    </p>
+                    <p>
+                        I developed functional RESTful APIs using Python and Flask, paired with a custom MongoDB schema optimized for fast, scalable queries. To improve usability, I also built a proof-of-concept React user interface for seamless file uploads and data retrieval. Concluded the internship by delivering a comprehensive presentation to senior engineering leadership regarding design trade-offs and future scalability.
+                    </p>
                 </div>
-                <p class="card-subtitle">West Windsor-Plainsboro Regional School District | West Windsor, NJ</p>
-                <ul>
-                    <li>Optimized deployment logistics for 4,500+ Chromebooks, creating new methods of distribution that reduced deployment time by more than 50%.</li>
-                    <li>Resolved 400+ IT tickets, configured 300+ devices, and provided ongoing support for teachers and staff.</li>
-                    <li>Maintained and repaired printers, and assisted in troubleshooting wired/wireless network issues.</li>
-                    <li>Supported audio and visual technology in large auditoriums, to ensure smooth operations for district events.</li>
-                </ul>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Research & Technical Projects</h2>
             
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Food Recipe LLM with RAG</h3>
-                    <span class="card-date">Recent</span>
+                    <h3 class="card-title">Advanced Mathematical Reasoning using AI Tools</h3>
+                    <span class="card-date">Selected Topics in Mathematics</span>
                 </div>
-                <p class="card-subtitle">FAISS, Sentence Transformers (MiniLM), NLP</p>
-                <ul>
-                    <li>Architected a Retrieval-Augmented Generation (RAG) pipeline utilizing FAISS and Sentence Transformers to mitigate LLM hallucinations and ground outputs in verified data.</li>
-                    <li>Engineered a semantic search index for 100,000+ recipes and developed strict prompt templates for the Phi-3-mini LLM, ensuring highly accurate and consistently formatted recipe generation.</li>
-                    <li>Deployed the end-to-end inference system as a RESTful web service using FastAPI and Uvicorn, enabling real-time user queries through an interactive UI.</li>
-                </ul>
+                <p class="card-subtitle">Deep Learning, LLM Evaluation, Lean4 Formal Verification</p>
+                <div class="card-body">
+                    <p>
+                        Led a research initiative to evaluate how modern Large Language Models (LLMs) genuinely reason through Olympiad-level mathematics, bypassing standard benchmark data contamination. Utilizing the MathArena testbed, we audited models like Llama-3 and Gemini against fresh, unseen competition problems.
+                    </p>
+                    <p>
+                        To address the cost limitations of "Best-of-N" sampling, our team architected a verification pipeline aiming to translate natural language proofs generated by the LLM into machine-checked formal representations using the Lean4 theorem prover. We identified critical LLM failure modes—such as hallucinating non-existent mathematical lemmas and failing at second-order logical consequences—laying the groundwork for a more robust "Deep Think"-style multi-path exploration framework.
+                    </p>
+                    <div class="tech-stack">
+                        <strong>Technologies:</strong> Llama-3, Gemma, Prompt Engineering, Lean4, Python, MathArena
+                    </div>
+                </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Skin.AI – AI-Powered Skin Health Analyzer</h3>
-                    <span class="card-date">Oct. 2024</span>
+                    <h3 class="card-title">Enterprise Wearable Access Control Patent</h3>
+                    <span class="card-date">Systems Architecture & Security</span>
                 </div>
-                <p class="card-subtitle">Python, PyTorch, Streamlit, Google Vertex AI</p>
-                <ul>
-                    <li>Developed and fine-tuned three machine learning models during a 24-hour hackathon, achieving over 80% accuracy in classifying common skin conditions.</li>
-                    <li>Integrated Vertex AI’s text-bison LLM to provide real-time explanations and personalized skincare advice alongside predictions.</li>
-                    <li>Built a Streamlit web app, demonstrating end-to-end deployment of ML models with an intuitive interface.</li>
-                    <li>Collaborated with a team of peers, showcasing ability to rapidly prototype and deliver impactful healthcare technology.</li>
-                </ul>
+                <p class="card-subtitle">Biometric Authentication & Quantum Cryptography</p>
+                <div class="card-body">
+                    <p>
+                        Drafted a comprehensive patent and enterprise marketing proposal for a novel smartwatch device designed for highly sensitive medical and industrial environments. The architecture moves beyond static credentials by integrating continuous, multi-modal biometric authentication (ECG and HeartID) with real-time vitals monitoring (SpO2, body temperature).
+                    </p>
+                    <p>
+                        I engineered the theoretical security transmission protocols to utilize decoy-state Continuous-Variable Quantum Key Distribution (CV-QKD). This ensures that data transmissions automatically revoke access upon anomaly detection, protecting against both physical presentation attacks (ISO/IEC 30107-3) and quantum-era cryptographic threats, while maintaining strict HIPAA compliance.
+                    </p>
+                </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">F1 Race Outcome Prediction</h3>
-                    <span class="card-date">Fall 2024</span>
+                    <h3 class="card-title">Retrieval-Augmented Recipe Generation</h3>
+                    <span class="card-date">Natural Language Processing Pipeline</span>
                 </div>
-                <p class="card-subtitle">Python, Scikit-learn, XGBoost, Pandas, Matplotlib</p>
-                <ul>
-                    <li>Engineered predictive models on 10+ seasons of Formula 1 data (driver stats, team performance, qualifying, and weather), achieving 91% accuracy in forecasting top-3 race finishes.</li>
-                    <li>Performed feature engineering (pit stops, lap times, track characteristics) and correlation analysis to identify dominant predictors such as qualifying position and constructor form.</li>
-                    <li>Benchmarked multiple classifiers (Logistic Regression, Random Forest, Gradient Boosting, XGBoost), with XGBoost outperforming alternatives by 10–15%.</li>
-                    <li>Visualized feature importance, correlation heatmaps, and model misclassifications, providing insights into F1 race dynamics and systematic prediction errors.</li>
-                </ul>
+                <p class="card-subtitle">LLM Grounding, Vector Databases, Transformers</p>
+                <div class="card-body">
+                    <p>
+                        Architected an end-to-end Retrieval-Augmented Generation (RAG) system to solve the issue of LLMs hallucinating ingredients or ignoring dietary constraints in recipe generation. By grounding the generation in a curated corpus rather than relying solely on parametric memory, the system ensures highly accurate outputs.
+                    </p>
+                    <p>
+                        The pipeline utilizes the all-MiniLM-L6-v2 transformer model to create dense vector representations of over 100,000 recipes, storing them in a FAISS semantic search index. Using strict prompt templates, retrieved context is fed into the Phi-3-mini LLM to enforce consistent output structure. The entire system is deployed as a high-performance RESTful web service via FastAPI and Uvicorn.
+                    </p>
+                    <div class="tech-stack">
+                        <strong>Technologies:</strong> Phi-3-mini, Hugging Face Transformers, FAISS, FastAPI, Uvicorn, Python
+                    </div>
+                </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Systems Programming Projects</h3>
-                    <span class="card-date">Fall 2024</span>
+                    <h3 class="card-title">HMDA Mortgage Data Normalization</h3>
+                    <span class="card-date">Database Architecture</span>
                 </div>
-                <p class="card-subtitle">C, POSIX, Unix</p>
-                <ul>
-                    <li><strong>Custom Memory Allocator:</strong> Implemented malloc/free with memory coalescing, alignment handling, and rigorous error detection.</li>
-                    <li><strong>Word Occurrence Counter:</strong> Built recursive text processing program to count word frequencies in directories, handling punctuation, hyphenation, and contractions accurately.</li>
-                    <li><strong>Unix Shell:</strong> Designed shell supporting redirection, pipes, wildcard expansion, and path searching using execv(), demonstrating low-level system programming expertise.</li>
-                </ul>
+                <p class="card-subtitle">Relational Databases & Demographic Analysis</p>
+                <div class="card-body">
+                    <p>
+                        Collaborated with a team to analyze and structure massive demographic and financial datasets from the Home Mortgage Disclosure Act (HMDA) to detect patterns of predatory lending and redlining. 
+                    </p>
+                    <p>
+                        I engineered the relational database schema, strictly adhering to Entity Division Rules and First Normal Form (1NF). By extracting repeating geographical and institutional structures and removing transitive dependencies, I significantly reduced data redundancy across thousands of application records. The final schemas were deployed and queried using PostgreSQL via secure SSH server connections.
+                    </p>
+                    <div class="tech-stack">
+                        <strong>Technologies:</strong> SQL, PostgreSQL, Database Normalization, Linux/SSH
+                    </div>
+                </div>
             </div>
+
         </section>
 
         <section id="skills">
-            <h2>Technical Skills</h2>
+            <h2>Technical Arsenal</h2>
             <div class="card">
                 <div class="skills-category">
                     <h3>Languages</h3>
-                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">C/C++</span>
                     <span class="skill-tag">SQL</span>
                     <span class="skill-tag">JavaScript</span>
@@ -376,76 +393,32 @@
                 <div class="skills-category">
                     <h3>AI/ML & Data Science</h3>
                     <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Hugging Face Transformers</span>
+                    <span class="skill-tag">Pandas / NumPy</span>
                     <span class="skill-tag">Scikit-learn</span>
                     <span class="skill-tag">BERTopic</span>
-                    <span class="skill-tag">Hugging Face</span>
-                    <span class="skill-tag">LLMs</span>
+                    <span class="skill-tag">Large Language Models (LLMs)</span>
+                    <span class="skill-tag">Prompt Engineering</span>
                 </div>
                 <div class="skills-category">
                     <h3>Frameworks & Platforms</h3>
                     <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">FastAPI</span>
                     <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Google Vertex AI</span>
+                    <span class="skill-tag">Google Vertex AI / GCP</span>
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">FAISS</span>
                     <span class="skill-tag">MongoDB</span>
                     <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">FAISS</span>
                 </div>
                 <div class="skills-category">
-                    <h3>Developer Tools</h3>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">PyCharm</span>
-                    <span class="skill-tag">Eclipse</span>
+                    <h3>DevOps & Developer Tools</h3>
+                    <span class="skill-tag">Git / GitHub Actions (CI/CD)</span>
                     <span class="skill-tag">Linux/Unix Shell</span>
+                    <span class="skill-tag">Postman</span>
                     <span class="skill-tag">Jupyter</span>
                 </div>
             </div>
-        </section>
-
-        <section id="leadership">
-            <h2>Leadership & Community Involvement</h2>
-            
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Customer Support Volunteer</h3>
-                    <span class="card-date">Mar. 2021 – Aug. 2023</span>
-                </div>
-                <p class="card-subtitle">Rise Thrift Store | Hightstown, NJ</p>
-                <ul>
-                    <li>Contributed 200+ volunteer hours, consistently assisting workers and clients several times a week.</li>
-                    <li>Applied Spanish language skills to communicate with and assist diverse customer groups, ensuring accessibility and inclusivity.</li>
-                    <li>Provided compassionate, hands-on support with customer service, stock management, and operational tasks.</li>
-                    <li>Helped streamline store organization, creating smoother client experiences.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Diploma in Data Science and AI</h3>
-                    <span class="card-date">Dec. 2019 – Sept. 2021</span>
-                </div>
-                <p class="card-subtitle">Teens Learn AI</p>
-                <ul>
-                    <li>Multi-year program focused on machine learning fundamentals, model development, and data analysis.</li>
-                    <li>Built multiple ML projects including text classification and image recognition, applying supervised and unsupervised learning methods.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Certifications</h3>
-                </div>
-                <ul>
-                    <li><strong>NJ Seal of Biliteracy — English & Spanish (Jun. 2023):</strong> Certified advanced bilingual proficiency through state-recognized assessment.</li>
-                    <li><strong>Piano Certification — Trinity College London (Mar. 2020 – Jun. 2022):</strong> Grade 6, Distinction. Demonstrated discipline and creativity through formal music training.</li>
-                </ul>
-            </div>
-
         </section>
 
     </div>
